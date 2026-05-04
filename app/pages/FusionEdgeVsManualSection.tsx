@@ -179,8 +179,8 @@ function ComparisonCard({
     return (
         <div
             className={`flex items-start gap-3 rounded-2xl border bg-white p-4 shadow-sm ${isManual
-                    ? "border-gray-100"
-                    : "border-purple-100 shadow-purple-100/40"
+                ? "border-gray-100"
+                : "border-purple-100 shadow-purple-100/40"
                 }`}
         >
             {/* Icon pill */}
@@ -200,8 +200,8 @@ function ComparisonCard({
                 </span>
                 <p
                     className={`mt-1 text-sm leading-relaxed ${isManual
-                            ? "font-medium text-gray-500"
-                            : "font-semibold text-gray-800"
+                        ? "font-medium text-gray-500"
+                        : "font-semibold text-gray-800"
                         }`}
                 >
                     {text}
