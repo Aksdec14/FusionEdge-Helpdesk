@@ -15,70 +15,111 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fusionedge.io"),
+
   title: {
-    default: "FusionEdge Helpdesk | Smart Facility Support Management",
-    template: "%s | FusionEdge Helpdesk",
+    default: "FusionEdge | Intelligent Facility Management Platform",
+    template: "%s | FusionEdge",
   },
+
   description:
-    "FusionEdge Helpdesk centralizes every facility service request into one intelligent platform. Log, assign, track, and resolve maintenance, cleaning, IT, and infrastructure issues — faster.",
+    "FusionEdge is an intelligent facility management platform that helps organizations streamline operations, manage assets, track maintenance, optimize inventory, and improve workplace efficiency through real-time insights and automation.",
+
   keywords: [
-    "facility helpdesk software",
-    "service request management",
-    "facility management platform",
-    "maintenance ticketing system",
-    "multi-site facility support",
-    "SLA monitoring",
+    "Facility Management Software",
+    "Asset Management Platform",
+    "Maintenance Management System",
+    "Work Order Management",
+    "Inventory Management Software",
+    "Smart Facility Management",
+    "Enterprise Facility Operations",
+    "Visitor Management System",
+    "Facility Automation Platform",
     "FusionEdge",
   ],
-  authors: [{ name: "FusionEdge", url: "https://fusionedge.io" }],
+
+  authors: [
+    {
+      name: "FusionEdge",
+      url: "https://fusionedge.io",
+    },
+  ],
+
   creator: "FusionEdge",
-  metadataBase: new URL("https://fusionedge.io"),
+
+  publisher: "FusionEdge",
+
   alternates: {
-    canonical: "/helpdesk",
+    canonical: "https://fusionedge.io",
   },
+
   openGraph: {
     type: "website",
-    locale: "en_IN",
-    url: "https://fusionedge.io/helpdesk",
+
+    locale: "en_US",
+
+    url: "https://fusionedge.io",
+
     siteName: "FusionEdge",
-    title: "FusionEdge Helpdesk | Smart Facility Support Management",
+
+    title: "FusionEdge | Intelligent Facility Management Platform",
+
     description:
-      "Centralize every facility service request. Log, assign, track, and resolve issues faster with FusionEdge Helpdesk — built for enterprise facility teams.",
+      "Streamline facility operations, asset management, maintenance scheduling, inventory tracking, and workplace services through one intelligent platform.",
+
     images: [
       {
-        url: "/WhiteBG_Logo.png",
+        url: "https://fusionedge.io/WhiteBG_Logo.jpg",
         width: 1200,
         height: 630,
-        alt: "FusionEdge Helpdesk Platform",
+        alt: "FusionEdge Intelligent Facility Management Platform",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "FusionEdge Helpdesk | Smart Facility Support Management",
+
+    title: "FusionEdge | Intelligent Facility Management Platform",
+
     description:
-      "Stop losing facility requests to emails and spreadsheets. FusionEdge Helpdesk gives you full visibility and control — across every site.",
-    images: ["/WhiteBG_Logo.png"],
+      "Smart facility management software for modern enterprises.",
+
+    images: [
+      "https://fusionedge.io/WhiteBG_Logo.jpg",
+    ],
+
     creator: "@fusionedge",
   },
+
   robots: {
     index: true,
+
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
+
   icons: {
     icon: [
-      { url: "/WhiteBG_Logo.png", type: "image/svg+xml" },
-      { url: "/WhiteBG_Logo.png", sizes: "32x32", type: "image/png" },
+      {
+        url: "/favicon.ico",
+        type: "image/x-icon",
+      },
     ],
-    apple: "/WhiteBG_Logo.png",
-    shortcut: "/WhiteBG_Logo.png",
+
+    apple: "/favicon.ico",
+
+    shortcut: "/favicon.ico",
   },
+
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -94,36 +135,52 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          type="image/svg+xml"
-          href="/fe_logo.png"
+          type="image/x-icon"
+          href="/favicon.ico"
         />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
+
               "@type": "SoftwareApplication",
-              name: "FusionEdge Helpdesk",
+
+              name: "FusionEdge",
+
               applicationCategory: "BusinessApplication",
+
               operatingSystem: "Web",
+
               description:
-                "Centralized facility service request management platform for enterprise teams.",
+                "Intelligent facility management platform for enterprise operations, maintenance tracking, asset management, and workplace optimization.",
+
               offers: {
                 "@type": "Offer",
-                url: "https://fusionedge.io/helpdesk",
+
+                url: "https://fusionedge.io",
               },
+
               provider: {
                 "@type": "Organization",
+
                 name: "FusionEdge",
+
                 url: "https://fusionedge.io",
               },
             }),
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col">
+
+      <body className="min-h-full flex flex-col bg-[#EFE9E3] text-[#1e2a38] overflow-x-hidden">
         <Navbar />
-        {children}
+
+        <main className="flex-1">
+          {children}
+        </main>
+
         <Footer />
       </body>
     </html>
