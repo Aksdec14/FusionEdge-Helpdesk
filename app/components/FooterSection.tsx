@@ -10,76 +10,76 @@ import { FaXTwitter } from "react-icons/fa6";
 // Data
 // ---------------------------------------------------------------------------
 const COLUMNS = [
-    {
-        title: "Navigation",
-        links: [
-            { label: "Home", href: "#home" },
-            { label: "Features", href: "#features" },
-        ],
-    },
-    {
-        title: "Explore",
-        links: [
-            { label: "How It Works", href: "#how-it-works" },
-            { label: "Why FusionEdge", href: "#why-fusionedge" },
-        ],
-    },
-    {
-        title: "Support",
-        links: [
-            { label: "FAQs", href: "#faqs" },
-            { label: "Contact Us", href: "#contact" },
-        ],
-    },
+  {
+    title: "Navigation",
+    links: [
+      { label: "Home", href: "/" },
+      { label: "Features", href: "#features" },
+    ],
+  },
+  {
+    title: "Explore",
+    links: [
+      { label: "How It Works", href: "#how-it-works" },
+      { label: "Why FusionEdge", href: "#why-fusionedge" },
+    ],
+  },
+  {
+    title: "Support",
+    links: [
+      { label: "FAQs", href: "#faqs" },
+      { label: "Contact Us", href: "#contact" },
+    ],
+  },
 ];
 
 const SOCIALS = [
-    { Icon: FaFacebookF, href: "#", label: "Facebook" },
-    { Icon: FaLinkedinIn, href: "https://www.linkedin.com/company/fusionedgeservices/", label: "LinkedIn" },
-    { Icon: FaXTwitter, href: "#", label: "X Twitter" },
+  { Icon: FaFacebookF, href: "#", label: "Facebook" },
+  { Icon: FaLinkedinIn, href: "https://www.linkedin.com/company/fusionedgeservices/", label: "LinkedIn" },
+  { Icon: FaXTwitter, href: "#", label: "X Twitter" },
 ];
 
 // ---------------------------------------------------------------------------
 // useReveal – adds .visible class when element scrolls into view
 // ---------------------------------------------------------------------------
 function useReveal() {
-    const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const el = ref.current;
-        if (!el) return;
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
 
-        const obs = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((e) => {
-                    if (e.isIntersecting) e.target.classList.add("visible");
-                });
-            },
-            { threshold: 0.15 }
-        );
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.15 }
+    );
 
-        obs.observe(el);
-        return () => obs.disconnect();
-    }, []);
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
-    return ref;
+  return ref;
 }
 
 // ---------------------------------------------------------------------------
 // Footer
 // ---------------------------------------------------------------------------
 export default function Footer() {
-    const logoRef = useReveal();
-    const col0Ref = useReveal();
-    const col1Ref = useReveal();
-    const col2Ref = useReveal();
-    const contactRef = useReveal();
+  const logoRef = useReveal();
+  const col0Ref = useReveal();
+  const col1Ref = useReveal();
+  const col2Ref = useReveal();
+  const contactRef = useReveal();
 
-    const colRefs = [col0Ref, col1Ref, col2Ref];
+  const colRefs = [col0Ref, col1Ref, col2Ref];
 
-    return (
-        <>
-            <style>{`
+  return (
+    <>
+      <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
         .footer-root {
@@ -277,101 +277,101 @@ export default function Footer() {
         }
       `}</style>
 
-            <footer className="footer-root" style={{ padding: "72px 24px 48px" }}>
-                <div className="footer-orb footer-orb-1" />
-                <div className="footer-orb footer-orb-2" />
-                <div className="footer-orb footer-orb-3" />
+      <footer className="footer-root" style={{ padding: "72px 24px 48px" }}>
+        <div className="footer-orb footer-orb-1" />
+        <div className="footer-orb footer-orb-2" />
+        <div className="footer-orb footer-orb-3" />
 
-                <div className="footer-watermark">FUSIONEDGE</div>
+        <div className="footer-watermark">FUSIONEDGE</div>
 
-                <div className="max-w-7xl mx-auto">
-                    <div className="footer-grid">
-                        <div className="footer-col" ref={logoRef}>
-                            <Image
-                                src="/FusionEdge_logo.png"
-                                alt="FusionEdge"
-                                height={44}
-                                width={66}
-                                className="mb-5"
-                                style={{ height: "44px", width: "auto" }}
-                            />
+        <div className="max-w-7xl mx-auto">
+          <div className="footer-grid">
+            <div className="footer-col" ref={logoRef}>
+              <Image
+                src="/FusionEdge_logo.png"
+                alt="FusionEdge"
+                height={44}
+                width={66}
+                className="mb-5"
+                style={{ height: "44px", width: "auto" }}
+              />
 
-                            <p className="text-sm leading-relaxed mb-5" style={{ color: "#6B7280" }}>
-                                Empowering businesses with next-gen facility support and helpdesk
-                                management solutions.
-                            </p>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: "#6B7280" }}>
+                Empowering businesses with next-gen facility support and helpdesk
+                management solutions.
+              </p>
 
-                            <div className="flex gap-3">
-                                {SOCIALS.map(({ Icon, href, label }) => (
-                                    <a key={label} href={href} aria-label={label} className="footer-social">
-                                        <Icon />
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
+              <div className="flex gap-3">
+                {SOCIALS.map(({ Icon, href, label }) => (
+                  <a key={label} href={href} aria-label={label} className="footer-social">
+                    <Icon />
+                  </a>
+                ))}
+              </div>
+            </div>
 
-                        {COLUMNS.map((col, i) => (
-                            <div key={col.title} className="footer-col" ref={colRefs[i]}>
-                                <h6 className="footer-col-title">{col.title}</h6>
-                                <ul className="flex flex-col gap-3">
-                                    {col.links.map(({ label, href }) => (
-                                        <li key={label}>
-                                            <Link href={href} className="footer-link">
-                                                {label}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
+            {COLUMNS.map((col, i) => (
+              <div key={col.title} className="footer-col" ref={colRefs[i]}>
+                <h6 className="footer-col-title">{col.title}</h6>
+                <ul className="flex flex-col gap-3">
+                  {col.links.map(({ label, href }) => (
+                    <li key={label}>
+                      <Link href={href} className="footer-link">
+                        {label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
 
-                        <div className="footer-col" ref={contactRef}>
-                            <h6 className="footer-col-title">Contact Us</h6>
-                            <ul className="flex flex-col gap-3 mb-6">
-                                <li>
-                                    <a href="mailto:info@fusionEdge.com" className="footer-link">
-                                        info@fusionEdge.com
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="tel:+919015122212" className="footer-link">
-                                        +91-9015122212
-                                    </a>
-                                </li>
-                            </ul>
+            <div className="footer-col" ref={contactRef}>
+              <h6 className="footer-col-title">Contact Us</h6>
+              <ul className="flex flex-col gap-3 mb-6">
+                <li>
+                  <a href="mailto:info@fusionEdge.com" className="footer-link">
+                    info@fusionEdge.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+919015122212" className="footer-link">
+                    +91-9015122212
+                  </a>
+                </li>
+              </ul>
 
-                            <h6 className="footer-col-title">Content</h6>
-                            <ul className="flex flex-col gap-3">
-                                <li>
-                                    <Link href="/privacy-policy" className="footer-link">
-                                        Privacy Policy
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/404" className="footer-link">
-                                        Cookie Policy
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+              <h6 className="footer-col-title">Content</h6>
+              <ul className="flex flex-col gap-3">
+                <li>
+                  <Link href="/privacy-policy" className="footer-link">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/404" className="footer-link">
+                    Cookie Policy
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-                    <div className="footer-bar">
-                        <span className="footer-bar-text">
-                            © {new Date().getFullYear()} FusionEdge. All rights reserved.
-                        </span>
+          <div className="footer-bar">
+            <span className="footer-bar-text">
+              © {new Date().getFullYear()} FusionEdge. All rights reserved.
+            </span>
 
-                        <div className="footer-bar-links">
-                            <Link href="/404" className="footer-bar-link">
-                                Terms of Service
-                            </Link>
-                            <Link href="/privacy-policy" className="footer-bar-link">
-                                Privacy Policy
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </>
-    );
+            <div className="footer-bar-links">
+              <Link href="/404" className="footer-bar-link">
+                Terms of Service
+              </Link>
+              <Link href="/privacy-policy" className="footer-bar-link">
+                Privacy Policy
+              </Link>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
 }

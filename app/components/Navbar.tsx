@@ -17,7 +17,7 @@ interface NavItem {
 
 // ── Data ───────────────────────────────────────────────────────────────────────
 const NAV_ITEMS: NavItem[] = [
-    { label: "Home", href: "#home" },
+    { label: "Home", href: "/" },
     {
         label: "Features",
         dropdown: [

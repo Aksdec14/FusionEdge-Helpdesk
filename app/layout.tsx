@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       "Centralize every facility service request. Log, assign, track, and resolve issues faster with FusionEdge Helpdesk — built for enterprise facility teams.",
     images: [
       {
-        url: "/og-helpdesk.png",
+        url: "/FusionEdge_logo.png",
         width: 1200,
         height: 630,
         alt: "FusionEdge Helpdesk Platform",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "FusionEdge Helpdesk | Smart Facility Support Management",
     description:
       "Stop losing facility requests to emails and spreadsheets. FusionEdge Helpdesk gives you full visibility and control — across every site.",
-    images: ["/og-helpdesk.png"],
+    images: ["/FusionEdge_logo.png"],
     creator: "@fusionedge",
   },
   robots: {
@@ -74,10 +74,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/FusionEdge_logo.png", type: "image/svg+xml" },
-      { url: "/fe_logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/FusionEdge_logo.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: "/fe_logo.png",
-    shortcut: "/fe_logo.png",
+    apple: "/FusionEdge_logo.png",
+    shortcut: "/FusionEdge_logo.png",
   },
 };
 
