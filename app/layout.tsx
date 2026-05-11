@@ -109,14 +109,14 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon.ico",
+        url: "/fe_logo.png",
         type: "image/x-icon",
       },
     ],
 
-    apple: "/favicon.ico",
+    apple: "/fe_logo.png",
 
-    shortcut: "/favicon.ico",
+    shortcut: "/fe_logo.png",
   },
 
   category: "technology",
@@ -136,7 +136,7 @@ export default function RootLayout({
         <link
           rel="icon"
           type="image/x-icon"
-          href="/favicon.ico"
+          href="/fe_logo.png"
         />
 
         <script
