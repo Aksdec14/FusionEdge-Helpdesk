@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "Centralize every facility service request. Log, assign, track, and resolve issues faster with FusionEdge Helpdesk — built for enterprise facility teams.",
     images: [
       {
-        url: "/WhiteBG_Logo.png",
+        url: "/FusionEdge_logo.png",
         width: 1200,
         height: 630,
         alt: "FusionEdge Helpdesk Platform",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "FusionEdge Helpdesk | Smart Facility Support Management",
     description:
       "Stop losing facility requests to emails and spreadsheets. FusionEdge Helpdesk gives you full visibility and control — across every site.",
-    images: ["/WhiteBG_Logo.png"],
+    images: ["/FusionEdge_logo.png"],
     creator: "@fusionedge",
   },
   robots: {
@@ -70,11 +70,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/WhiteBG_Logo.png", type: "image/svg+xml" },
-      { url: "/WhiteBG_Logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/fe_logo.png", type: "image/svg+xml" },
+      { url: "/fe_logo.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: "/WhiteBG_Logo.png",
-    shortcut: "/WhiteBG_Logo.png",
+    apple: "/fe_logo.png",
+    shortcut: "/fe_logo.png",
   },
 };
 export default function RootLayout({
